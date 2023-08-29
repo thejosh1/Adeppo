@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adeppo Group</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="public/images/logo1.jpg">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style type="text/css">
+    body {
+      background-image: url(public/images/background-img.png);
+      background-size: cover;
+      transition: background-image 0.2s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <img class="section-logo" src="public/images/logo.png" alt="logo">
+      <div class="pagination">
+        <div class="pag-item-1" id="pag1" onmouseover="toggleDetail(0)">
+          <div class="pag-marker" id="pag-marker"></div>
+        </div>
+        <div class="pag-item-2"></div>
+        <div class="pag-item-1" id="pag2" onmouseover="toggleDetail(1)">
+          <div class="pag-marker" id="pag-marker"></div>
+        </div>
+        <div class="pag-item-2"></div>
+        <div class="pag-item-1" id="pag3" onmouseover="toggleDetail(2)">
+          <div class="pag-marker" id="pag-marker"></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-container">
+      <div class="scroll-wheel-wrapper">
+        <div class="scroll-wheel-wrapper2">
+          <div class="scroll-wheel-wrapper3">
+            <div class="shadow">
+
+            </div>
+            <div class="menu-curved-line" id="menu-circle">
+              <a href="oil-and-gas.html" id="menu-circle" onmouseover="toggleDetail(0)" class="normal-link"
+                style="color: #686868;">
+                <div class="menu-circle" id="borderColor">
+                  <div class="column-text">
+                    <img src="public/images/petrol.png" alt="petrol" class="active-icon oil-and-gas-image">
+                    <p class="text">Oil and Gas</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="menu-curved-line1" id="menu-circle1">
+              <a href="logistics.html" id="menu-circle1" onmouseover="toggleDetail(1)" class="normal-link"
+                style="color: #686868;">
+                <div class="menu-circle1" id="borderColor1">
+                  <div class="column-text">
+                    <img src="public/images/logistic.png" alt="logistics" class="active-icon logistic-image">
+                    <p class="text">Logistics</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="menu-curved-line2" id="menu-circle2">
+              <a href="renewable-energy.html" id="menu-circle2" onmouseover="toggleDetail(2)" class="normal-link"
+                style="color: #686868;">
+                <div class="menu-circle2" id="borderColor2">
+                  <div class="column-text">
+                    <img src="public/images/charge-battery.png" alt="Renewable-energy"
+                      class="active-icon renewable-image">
+                    <p class="text">Energy</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="description-column">
+      <div class="rounded-rectangle">
+        <div class="row">
+          <img src="public/images/Vector.png" alt="audio" class="audio-image">
+          <a href="contact-us-page.html" class="normal-link">
+            <p class="button-text">Contact us</p>
+          </a>
+          <div class="arrow-right">
+            <img src="public/images/Stroke1.png" alt="arrow-right" aria-label="arrow-right" class="arrw-image">
+          </div>
+        </div>
+      </div>
+      <div class="no-display" id="description-column-text">
+        <p class="description-header">
+          Marine Logistics
+        </p>
+        <p class="description-text">
+          We ensure the process of planning impplementing, 
+          and managing the movement of goods and information throught the ocean carriage.
+        </p>
+        <button class="description-button" id="mobile-button">
+          <p class="button-description-text">View site</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="main.js" type="module"></script>
+  <script>
+    var details = [
+      {
+        title: 'Oil and Gas',
+        body: 'Providing services such as constructing rigs, designing pipes and pipelines, carrying out technical, construction works and supplies among others',
+        image: 'public/images/oil-and-gas.png'
+      },
+      {
+        title: 'Marine Logistics',
+        body: 'We ensure the process of planning impplementing, and managing the movement of goods and information throught the ocean carriage',
+        image: 'public/images/background-img.png'
+      },
+      {
+        title: 'Renewable Energy',
+        body: 'We find ways to generate energy from (theoretically unlimited) natural resources',
+        image: 'public/images/renewable-energy.png'
+      },
+    ];
+
+    var previewButtons = document.getElementsByClassName('menu-circle');
+    console.log(previewButtons);
+
+    previewButtons.onmouseover = function (event) {
+      console.log(event);
+    }
+
+    var isDisplayed = false;
+
+    toggleDetail = function (num) {
+      var colors = ['#C1844D', '#4B76E5', '#FF6D00']
+      console.log(num);
+      document.getElementById("description-column-text").style.display = "flex";
+      document.getElementsByClassName("description-header")[0].innerText = details[num].title;
+      document.getElementsByClassName("description-text")[0].innerText = details[num].body;
+      document.getElementsByTagName('body')[0].style.backgroundImage = "url(" + details[num].image + ")";
+
+      document.getElementsByClassName('pag-item-1')[0].style.backgroundColor = 'transparent';
+      document.getElementsByClassName('pag-item-1')[1].style.backgroundColor = 'transparent';
+      document.getElementsByClassName('pag-item-1')[2].style.backgroundColor = 'transparent';
+      document.getElementsByClassName('pag-item-1')[num].style.backgroundColor = colors[num];
+      
+      // Update the href attribute of the button based on the selected detail
+      var mobileLink = document.getElementById('mobile-button');
+      switch (num) {
+        case 0:
+          mobileLink.innerHTML = '<a class="button-description-text" href="oil-and-gas.html">View site</a>';
+          break;
+        case 1:
+          mobileLink.innerHTML = '<a class="button-description-text" href="logistics.html">View site</a>';
+          break;
+        case 2:
+          mobileLink.innerHTML = '<a class="button-description-text" href="renewable-energy.html">View site</a>';
+          break;
+        default:
+          mobileLink.innerHTML = '<a class="button-description-text" href="logistics.html">View site</a>';
+      }
+    }
+
+    document.getElementById("mobile-button").addEventListener("click", function() {
+  window.location.href = "logistics.html";
+
+  function preventLinkAction(event) {
+    event.preventDefault();
+  }
+});
+
+  
+
+$(window).resize(function() {
+    var width = $(window).width();
+    var mobileScreen = 900;
+
+    if (width <= mobileScreen) {
+        // Change href attributes of specific anchor tags within specified divs
+        $('#menu-circle a, #menu-circle1 a, #menu-circle2 a').attr('href', '#');
+        // You can also hide them if you want
+        // $('#menu-circle a, #menu-circle1 a, #menu-circle2 a').hide();
+    } else {
+        // Restore original href attributes
+        $('#menu-circle a').attr('href', 'oil-and-gas.html');
+        $('#menu-circle1 a').attr('href', 'logistics.html');
+        $('#menu-circle2 a').attr('href', 'renewable-energy.html');
+    }
+}).resize();
+
+  </script>
+</body>
+
+</html>

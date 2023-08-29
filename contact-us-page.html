@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adeppo Group</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="public/images/logo1.jpg">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
+    <link rel="preload" as="script" href="jquery.min.js">
+    <link rel="preload" as="script" href="theme.js">
+</head>
+
+<body>
+    <div class="nav-wrapper">
+        <div class="logo-image">
+            <a href="index.html"><img src="public/images/logo1.jpg" alt="Adeppo-group logo"></a>
+        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <img class="icon-hamburger" src="public/images/icon-hamburger.svg" alt="" aria-hidden="false">
+            <span class="visually-hidden">Menu</span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation">
+            <ul aria-label="Primary" role="list" class="nav-list">
+                <img class="icon-close" src="public/images/icon-close.svg" alt="" aria-hidden="true">
+                <li><a href="oil-and-gas.html" class="nav-link">Oil and Gas</a></li>
+                <li><a href="logistics.html" class="nav-link">Marine Logistics</a></li>
+                <li><a href="renewable-energy.html" class="nav-link">Renewable Energy</a></li>
+                <li><a href="#" class="nav-link-b | is-small-screen">Our Services</a></li>
+                <li><a href="contact-us-page.html" class="nav-link-b | is-small-screen">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="services-nav">
+            <p class="our-services">
+                Our Services
+            </p>
+            <p class="contact-link"><a href="contact-us-page.html">Contact us</a></p>
+            <button class="oil-and-gas-button" style="background: #293037;">
+                <a href="contact-us-page.html" class="contact-button" style="color: transparent;">
+                    <p class="oil-and-gas-button-text">Contact us ></p>
+                </a>
+            </button>
+        </div>
+    </div>
+    <section>
+        <div class="contact-div-background">
+            <div class="contact-div-background-image">
+                <div class="background-image1">
+                    <img src="public/images/small-contact-image.png" alt="background image" class="background-img1">
+                    <img src="public/images/background-image410.png" alt="background-image" class="big-background-img1">
+                </div>
+                <div class="background-image2">
+                    <img src="public/images/small-contact-image2.png" alt="background image" class="background-img2">
+                    <img src="public/images/background-image 412.png" alt="background-image"
+                        class="big-background-img2">
+                </div>
+            </div>
+            <div class="contact-div-columns">
+                <div class="contact-form">
+                    <div class="contact-form-field">
+                        <div class="contact-form-description">
+                            <p class="contact-form-description-header">
+                                Drop your request
+                            </p>
+                            <p class="contact-form-description-body">
+                                Choose which of the services you would like to request
+                            </p>
+                        </div>
+                        <form>
+
+                            <div class="contact-input-form-group">
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span class="selected">Services</span>
+                                        <div class="caret"></div>
+                                    </div>
+                                    <ul class="menu">
+                                        <li>Oil and Gas</li>
+                                        <li>Marine Logistics</li>
+                                        <li>Renewable Energy</li>
+                                        <li>Real Estate</li>
+                                    </ul>
+                                </div>
+                                <div class="name-row">
+                                    <label for="first-name" aria-required="true" aria-label="First-name"
+                                        role="textbox"></label>
+                                    <input type="text" id="first-name" placeholder="first name" class="name">
+                                    <label for="last-name" aria-required="true" aria-label="last-name"
+                                        role="textbox"></label>
+                                    <input type="text" id="last-name" placeholder="Last name" class="name float-right">
+                                </div>
+                                <div class="name-row">
+                                    <label for="phone-number" aria-required="true" aria-label="phone number"
+                                        role="textbox"></label>
+                                    <input type="tel" id="phone-number" placeholder="Phone number" class="name">
+                                    <label for="email" aria-required="true" aria-label="email" role="textbox"></label>
+                                    <input type="email" id="email" placeholder="Email" class="name float-right">
+                                </div>
+                                <div class="name-row">
+                                    <label for="message-box" aria-required="true" aria-label="message box"
+                                        role="textbox"></label>
+                                    <input type="text" id="message-box" placeholder="Send message" class="message-box">
+                                </div>
+                            </div>
+                            <div class="terms-and-conditions">
+                                <div class="terms-and-conditions-checkbox"></div>
+                                <p class="terms-and-conditions-text">
+                                    By checking the box and clicking the button below, you are agreeing to our privacy
+                                    policy and terms and condition.
+                                </p>
+                            </div>
+                            <p class="error-message" style="display: none;">Please accept the terms and conditions.</p>
+                            <input type="submit" value="Send Message" class="button form-button" id="submit-button">
+
+                        </form>
+                    </div>
+                </div>
+                <div class="contact-column">
+                    <div class="background-image-row-box">
+                        <div class="eng-image1">
+                            <img src="public/images/engineer-image2.png" alt="engineer" class="eng-img1">
+                        </div>
+                        <div class="white-seperator"></div>
+                        <div class="eng-image2">
+                            <img src="public/images/oil-rig-image2.png" alt="oil-rig" class="eng-img2">
+                        </div>
+                    </div>
+                    <div class="contact-address">
+                        <p class="contact-header">
+                            Contact Us
+                        </p>
+                        <p class="contact-us-description-text">
+                            We hope you found everything you need to know about Adeppo Group. Feel free to contact us.
+                        </p>
+                        <div class="phone-and-email">
+                            <div class="phone-grid">
+                                <p class="phone-grid-header">
+                                    Phone:
+                                </p>
+                                <p class="phone-number">
+                                    + 1 346 808 0622
+                                </p>
+                                <p class="phone-number">
+                                    +234 817 459 3636
+                                </p>
+                            </div>
+                            <div class="email-grid">
+                                <p class="send-email">
+                                    Send Email:
+                                </p>
+                                <p class="email-address">
+                                    info@adeppo.com
+                                </p>
+                            </div>
+                        </div>
+                        <div class="address-grid">
+                            <p class="address-text">
+                                Address:
+                            </p>
+                            <p class="location-address">
+                                4015 W. Alabama St.<br />
+                                Houston, TX 77027 USA
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="footer-container">
+            <div class="footer-item-container">
+                <div class="footer-wrapper">
+                    <div class="footer-logo-social">
+                        <a href="index.html" aria-label="home">
+                            <img src="public/images/footer-logo.png" alt="logo-image" class="footer-logo">
+                        </a>
+                        <div>
+                            <ul class="social-list" role="list" aria-label="Social links">
+                                <li><a aria-label="instagram" href="#">
+                                        <div class="social-list">
+                                            <div class="background-image"></div>
+                                            <img src="public/images/instagram.png" alt="facebook" class="instagram">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a aria-label="facebook" href="#">
+                                        <div class="social-list">
+                                            <div class="background-image"></div>
+                                            <img src="public/images/facebook.png" alt="facebook" class="facebook">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li><a aria-label="twitter" href="#">
+                                        <div class="social-list">
+                                            <div class="background-image"></div>
+                                            <img src="public/images/twitter.png" alt="facebook" class="twitter">
+                                        </div>
+                                </li>
+                                <li><a aria-label="whatsapp" href="#">
+                                        <div class="social-list">
+                                            <div class="background-image"></div>
+                                            <img src="public/images/whatsapp.png" alt="facebook" class="whatsapp">
+                                        </div>
+                                    </a></li>
+                                <li><a aria-label="linkedin" href="#">
+                                        <div class="social-list">
+                                            <div class="background-image"></div>
+                                            <img src="public/images/linkedin.png" alt="facebook" class="linkedin">
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-nav">
+                        <div class="footer-logo-social2">
+                            <a href="index.html" aria-label="home">
+                                <img src="public/images/footer-logo.png" alt="logo-image" class="footer-logo">
+                            </a>
+                            <div>
+                                <ul class="social-list" role="list" aria-label="Social links">
+                                    <li><a aria-label="instagram" href="#">
+                                            <div class="social-list">
+                                                <div class="background-image"></div>
+                                                <img src="public/images/instagram.png" alt="facebook" class="instagram">
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="facebook" href="#">
+                                            <div class="social-list">
+                                                <div class="background-image"></div>
+                                                <img src="public/images/facebook.png" alt="facebook" class="facebook">
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><a aria-label="twitter" href="#">
+                                            <div class="social-list">
+                                                <div class="background-image"></div>
+                                                <img src="public/images/twitter.png" alt="facebook" class="twitter">
+                                            </div>
+                                    </li>
+                                    <li><a aria-label="whatsapp" href="#">
+                                            <div class="social-list">
+                                                <div class="background-image"></div>
+                                                <img src="public/images/whatsapp.png" alt="facebook" class="whatsapp">
+                                            </div>
+                                        </a></li>
+                                    <li><a aria-label="linkedin" href="#">
+                                            <div class="social-list">
+                                                <div class="background-image"></div>
+                                                <img src="public/images/linkedin.png" alt="facebook" class="linkedin">
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-nav-col">
+                            <P class="footer-nav-header">
+                                Services
+                            </P>
+                            <ul class="nav-item-list">
+                                <a href="oil-and-gas.html" class="page-link">
+                                    <li class="nav-item-list-text" style="list-style: none;">Oil and Gas Services</li>
+                                </a>
+                                <a href="logistics.html" class="page-link">
+                                    <li class="nav-item-list-text" style="list-style: none;">Marine Logistics</li>
+                                </a>
+                                <a href="renewable-energy.html" class="page-link">
+                                    <li class="nav-item-list-text" style="list-style: none;">Renewable Energy</li>
+                                </a>
+                                <a href="#" class="page-link">
+                                    <li class="nav-item-list-text" style="list-style: none;">Real Estate</li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="footer-nav-col">
+                            <P class="footer-nav-header">
+                                Company
+                            </P>
+                            <ul class="nav-item-list">
+                                <li class="nav-item-list-text" style="list-style: none;">Contact us</li>
+                                <li class="nav-item-list-text" style="list-style: none;">Press</li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav-col">
+                            <P class="footer-nav-header">
+                                Resources
+                            </P>
+                            <ul class="nav-item-list">
+                                <li class="nav-item-list-text" style="list-style: none;">Privacy</li>
+                                <li class="nav-item-list-text" style="list-style: none;">Terms and Conditions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="nav-underline">
+                    <p class="cookie-text">
+                        This website uses <a href="#">cookies</a> ↗ We use cookies to personalise content and ads, to
+                        provide social media features and to analyse our traffic. The content on this website does not
+                        constitute a complete description of
+                        Adeppo Group. By using this website, you accept our <a href="#">Terms of Use</a><br /> and <a
+                            href="#">Privacy Policy.</a>
+                        <br />
+                        <br />
+                    </p>
+                    <p class="all-rights-reserved">© 2022 Adeppo Groups. All Rights Reserved.</p>
+                    <div class="empty-space"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>
