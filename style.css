@@ -6687,7 +6687,7 @@ body.active-popup .popup {
 
 #description-column-text {
   position: absolute;
-  bottom: 80px;
+  bottom: 60px;
   right: 30px;
   max-width: 324px;
 }
