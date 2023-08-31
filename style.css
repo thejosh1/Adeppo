@@ -6687,11 +6687,16 @@ body.active-popup .popup {
 
 #description-column-text {
   position: absolute;
-  bottom: 42px;
+  bottom: 171px;
   right: 30px;
   max-width: 324px;
 }
 
+@media(max-height: 800px) {
+  #description-column-text{
+    bottom: 30px
+  }
+}
 
 .image1,
 .image2,
