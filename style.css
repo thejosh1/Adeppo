@@ -868,7 +868,7 @@ svg {
 }
 
 .scroll-wheel-wrapper {
-  top: 35px;
+  top:0px;
   height: 850px;
   width: 850px;
   overflow: hidden;
