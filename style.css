@@ -45,8 +45,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   overflow-x: hidden;
-  overflow-y: hidden;
-  max-height: 100vh;
+  
   min-width: 360px;
 }
 
