@@ -44,7 +44,7 @@
 
             </div>
             <div class="menu-curved-line" id="menu-circle">
-              <a href="oil-and-gas.html" id="menu-circle" onmouseover="toggleDetail(0)" class="normal-link"
+              <a href="oil-and-gas.html" id="menu-circle" rel="preload" as="image" onmouseover="toggleDetail(0)" class="normal-link"
                 style="color: #686868;">
                 <div class="menu-circle" id="borderColor">
                   <div class="column-text">
@@ -55,7 +55,7 @@
               </a>
             </div>
             <div class="menu-curved-line1" id="menu-circle1">
-              <a href="logistics.html" id="menu-circle1" onmouseover="toggleDetail(1)" class="normal-link"
+              <a href="logistics.html" id="menu-circle1" rel="preload" as="image" onmouseover="toggleDetail(1)" class="normal-link"
                 style="color: #686868;">
                 <div class="menu-circle1" id="borderColor1">
                   <div class="column-text">
@@ -66,7 +66,7 @@
               </a>
             </div>
             <div class="menu-curved-line2" id="menu-circle2">
-              <a href="renewable-energy.html" id="menu-circle2" onmouseover="toggleDetail(2)" class="normal-link"
+              <a href="renewable-energy.html" id="menu-circle2" rel="preload" as="image" onmouseover="toggleDetail(2)" class="normal-link"
                 style="color: #686868;">
                 <div class="menu-circle2" id="borderColor2">
                   <div class="column-text">
@@ -122,23 +122,20 @@
       },
       {
         title: 'Renewable Energy',
-        body: 'We find ways to generate energy from (theoretically unlimited) natural resources',
+        body: 'We find ways to generate energy from (theoretically unlimted) natural resources',
         image: 'public/images/renewable-energy.png'
       },
     ];
 
     var previewButtons = document.getElementsByClassName('menu-circle');
-    console.log(previewButtons);
 
     previewButtons.onmouseover = function (event) {
-      console.log(event);
     }
 
     var isDisplayed = false;
 
     toggleDetail = function (num) {
       var colors = ['#C1844D', '#4B76E5', '#FF6D00']
-      console.log(num);
       document.getElementById("description-column-text").style.display = "flex";
       document.getElementsByClassName("description-header")[0].innerText = details[num].title;
       document.getElementsByClassName("description-text")[0].innerText = details[num].body;
