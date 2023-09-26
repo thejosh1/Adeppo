@@ -1008,8 +1008,8 @@ svg {
   border-radius: 50%/50px 50px 0 0;
   position: relative;
   transform: rotate(-2deg);
-  left: 90px;
-  top: -3px;
+  left: 66px;
+  top: -1px;
 }
 
 @media (max-width: 50em) {
@@ -1072,11 +1072,11 @@ svg {
   height: 53.09px;
   border: solid 5px #fff;
   border-color: #fff transparent transparent transparent;
-  border-radius: 50%/50px 50px 0 0;
+  border-radius: 48%/58px 63px 0 0;
   position: relative;
-  top: 157px;
-  left: -69px;
-  transform: rotate(-108deg);
+  top: 137px;
+  left: -65px;
+  transform: rotate(-113deg);
 }
 
 @media (max-width: 50em) {
@@ -1116,7 +1116,7 @@ svg {
     position: absolute;
     margin-left: 63px;
     margin-top: -35px;
-    transform: rotate(105deg);
+    transform: rotate(112deg);
   }
 }
 
@@ -1154,10 +1154,10 @@ svg {
   height: 53.09px;
   border: solid 5px #fff;
   border-color: #fff transparent transparent transparent;
-  border-radius: 50%/50px 50px 0 0;
+  border-radius: 50%/50px 54px 0 0;
   position: relative;
-  top: 96px;
-  left: 258px;
+  top: 65px;
+  left: 209px;
   transform: rotate(106.5deg)
 }
 
@@ -1226,7 +1226,7 @@ svg {
   position: absolute;
   left: 55px;
   top: -45px;
-  transform: rotate(-107deg);
+  transform: rotate(-106deg);
 }
 
 @media (max-width: 50em) {
