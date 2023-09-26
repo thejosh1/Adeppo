@@ -866,9 +866,9 @@ svg {
 }
 
 .scroll-wheel-wrapper {
-  top: 45px;
-  height: 850px;
-  width: 850px;
+  top: 20px;
+  height: 700px;
+  width: 700px;
   overflow: hidden;
   background-image: url("public/images/Ellipse1.png");
   background-size: cover;
@@ -904,9 +904,9 @@ svg {
 
 
 .scroll-wheel-wrapper2 {
-  margin: 79px;
-  width: 700px;
-  height: 700px;
+  margin: 73px;
+  width: 550px;
+  height: 550px;
   background-image: url("public/images/Ellipse2.png");
   background-size: cover;
   position: absolute;
@@ -936,9 +936,9 @@ svg {
 }
 
 .scroll-wheel-wrapper3 {
-  margin: 148px;
-  height: 400px;
-  width: 400px;
+  margin: 100px;
+  height: 350px;
+  width: 350px;
   background-image: url(public/images/Ellipse4.png);
   background-size: cover;
   position: absolute;
@@ -6694,7 +6694,7 @@ body.active-popup .popup {
 
 @media(max-height: 800px) {
   #description-column-text{
-    bottom: 30px
+    bottom: 100px
   }
 }
 
