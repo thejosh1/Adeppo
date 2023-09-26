@@ -45,6 +45,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   overflow-x: hidden;
+  overflow-y: hidden;
+  max-height: 100vh;
   min-width: 360px;
 }
 
@@ -866,9 +868,9 @@ svg {
 }
 
 .scroll-wheel-wrapper {
-  top: 20px;
-  height: 700px;
-  width: 700px;
+  top: 35px;
+  height: 850px;
+  width: 850px;
   overflow: hidden;
   background-image: url("public/images/Ellipse1.png");
   background-size: cover;
@@ -904,9 +906,9 @@ svg {
 
 
 .scroll-wheel-wrapper2 {
-  margin: 73px;
-  width: 550px;
-  height: 550px;
+  margin: 79px;
+  width: 700px;
+  height: 700px;
   background-image: url("public/images/Ellipse2.png");
   background-size: cover;
   position: absolute;
@@ -936,9 +938,9 @@ svg {
 }
 
 .scroll-wheel-wrapper3 {
-  margin: 100px;
-  height: 350px;
-  width: 350px;
+  margin: 148px;
+  height: 400px;
+  width: 400px;
   background-image: url(public/images/Ellipse4.png);
   background-size: cover;
   position: absolute;
@@ -1008,8 +1010,8 @@ svg {
   border-radius: 50%/50px 50px 0 0;
   position: relative;
   transform: rotate(-2deg);
-  left: 66px;
-  top: -1px;
+  left: 90px;
+  top: -3px;
 }
 
 @media (max-width: 50em) {
@@ -1072,11 +1074,11 @@ svg {
   height: 53.09px;
   border: solid 5px #fff;
   border-color: #fff transparent transparent transparent;
-  border-radius: 48%/58px 63px 0 0;
+  border-radius: 50%/50px 50px 0 0;
   position: relative;
-  top: 137px;
-  left: -65px;
-  transform: rotate(-113deg);
+  top: 157px;
+  left: -69px;
+  transform: rotate(-108deg);
 }
 
 @media (max-width: 50em) {
@@ -1116,7 +1118,7 @@ svg {
     position: absolute;
     margin-left: 63px;
     margin-top: -35px;
-    transform: rotate(112deg);
+    transform: rotate(105deg);
   }
 }
 
@@ -1154,10 +1156,10 @@ svg {
   height: 53.09px;
   border: solid 5px #fff;
   border-color: #fff transparent transparent transparent;
-  border-radius: 50%/50px 54px 0 0;
+  border-radius: 50%/50px 50px 0 0;
   position: relative;
-  top: 65px;
-  left: 209px;
+  top: 96px;
+  left: 258px;
   transform: rotate(106.5deg)
 }
 
@@ -1226,7 +1228,7 @@ svg {
   position: absolute;
   left: 55px;
   top: -45px;
-  transform: rotate(-106deg);
+  transform: rotate(-107deg);
 }
 
 @media (max-width: 50em) {
@@ -6694,7 +6696,7 @@ body.active-popup .popup {
 
 @media(max-height: 800px) {
   #description-column-text{
-    bottom: 100px
+    bottom: 30px
   }
 }
 
