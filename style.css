@@ -6689,7 +6689,7 @@ body.active-popup .popup {
 #description-column-text {
   position: absolute;
   bottom: 171px;
-  right: 30px;
+  right: 0px;
   max-width: 324px;
 }
 
