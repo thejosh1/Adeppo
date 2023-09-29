@@ -25,19 +25,31 @@
                 });
             });
             document.addEventListener('DOMContentLoaded', function() {
-                // Select the mobile nav toggle button and the Our Services link
-                const mobileNavToggle = document.getElementsByClassName('mobile-nav-toggle');
-                const ourServicesLink = document.querySelector('.nav-link-b.is-small-screen[href="#otherservices"]');
+    // Select all elements with the class 'mobile-nav-toggle'
+    const mobileNavToggles = document.querySelectorAll('.mobile-nav-toggle');
+    
+    // Select the Our Services link
+    const ourServicesLink = document.querySelector('.nav-link-b.is-small-screen[href="#otherservices"]');
 
-                // Add click event listener to the Our Services link
-                ourServicesLink.addEventListener('click', function() {
-                    // Close the mobile navigation menu by toggling the aria-expanded attribute
-                    const isExpanded = mobileNavToggle.getAttribute('aria-expanded') === 'true';
-                    mobileNavToggle.setAttribute('aria-expanded', String(!isExpanded));
-                    console.log(mobileNavToggle.getAttribute);
-                    // You can also close the navigation visually by adding CSS classes or styles here
-                });
-            });
+    // Add click event listener to each mobile nav toggle button
+    mobileNavToggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function() {
+            // Close the mobile navigation menu by toggling the aria-expanded attribute
+            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!isExpanded));
+        });
+    });
+
+    // Add click event listener to the Our Services link
+    ourServicesLink.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
     </script>
 
     <div class="page-container">
