@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Hide mobileNavToggle when the navigation menu is closed
       if (!isExpanded) {
-          mobileNavToggle.style.display = 'none';
+          mobileNavToggle.style.display = 'block';
           console.log("hhhh");
       } else {
-          mobileNavToggle.style.display = 'block'; // or 'inline-block' based on your design
+          mobileNavToggle.style.display = 'none'; // or 'inline-block' based on your design
           console.log("block");
       }
   }
