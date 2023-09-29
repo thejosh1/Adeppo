@@ -14,6 +14,17 @@
 </head>
 
 <body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.services-nav a[href="#otherservices"]').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+            });
+        });
+    </script>
     <div class="page-container">
         <div class="nav-wrapper">
             <div class="logo-image">
@@ -32,13 +43,13 @@
                         <div class="underline" style="background: #FF6D00; width: 131px;"></div>
                         </a></li>
                     </div>
-                    <li><a href="#" class="nav-link-b | is-small-screen">Our Services</a></li>
+                    <li><a href="#otherservices" class="nav-link-b | is-small-screen">Our Services</a></li>
                     <li><a href="contact-us-page.html" class="nav-link-b | is-small-screen">Contact us</a></li>
                 </ul>
             </nav>
             <div class="services-nav">
                 <p class="our-services">
-                    Our Services
+                    <a href="#otherservices" class="nav-link" style="text-decoration: none; color: #293037;"> Our Services </a>
                 </p>
                 <p class="contact-link"><a href="contact-us-page.html">Contact us</a></p>
                 <button class="oil-and-gas-button" style="background: #FF6D00;">
@@ -183,7 +194,7 @@
         <section>
             <div class="margin-spacer">
                 <div class="section-container">
-                    <div class="grid-container">
+                    <div class="grid-container" id="otherservices">
                         <p class="other-services">Other Services</p>
                         <div class="image-row">
                             <div class="oil-service-image">
