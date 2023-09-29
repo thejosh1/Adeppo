@@ -24,13 +24,27 @@
             });
             });
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        // Select the mobile nav toggle button and the Our Services link
+        const mobileNavToggle = document.getElementById('mobileNavToggle');
+        const ourServicesLink = document.querySelector('.services-nav a[href="#otherservices"]');
+
+        // Add click event listener to the Our Services link
+        ourServicesLink.addEventListener('click', function() {
+            // Close the mobile navigation menu by toggling the aria-expanded attribute
+            const isExpanded = mobileNavToggle.getAttribute('aria-expanded') === 'true';
+            mobileNavToggle.setAttribute('aria-expanded', String(!isExpanded));
+            // You can also close the navigation visually by adding CSS classes or styles here
+        });
+    });
     </script>
     <div class="page-container">
         <div class="nav-wrapper">
             <div class="logo-image">
                 <a href="index.html"><img src="public/images/logo1.jpg" alt="Adeppo-group logo"></a>
             </div>
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-controls="primary-navigation" aria-expanded="false">
                 <img class="icon-hamburger" src="public/images/icon-hamburger.svg" alt="" aria-hidden="false">
                 <span class="visually-hidden">Menu</span>
             </button>
