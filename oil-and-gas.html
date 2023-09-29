@@ -25,25 +25,35 @@
                 });
             });
             document.addEventListener('DOMContentLoaded', function() {
-                // Select the mobile nav toggle button and the Our Services link
-                const mobileNavToggle = document.getElementById('mobileNavToggle');
-                const ourServicesLink = document.querySelector('.services-nav a[href="#otherservices"]');
+    // Select the mobile nav toggle button and the Our Services link
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+    const ourServicesLink = document.querySelector('.services-nav a[href="#otherservices"]');
 
-                // Add click event listener to the Our Services link
-                ourServicesLink.addEventListener('click', function(e) {
-                    // Close the mobile navigation menu by toggling the aria-expanded attribute
-                    const isExpanded = mobileNavToggle.getAttribute('aria-expanded') === 'true';
-                    mobileNavToggle.setAttribute('aria-expanded', String(!isExpanded));
+    // Function to toggle mobile navigation menu
+    function toggleMobileMenu() {
+        const isExpanded = mobileNavToggle.getAttribute('aria-expanded') === 'true';
+        mobileNavToggle.setAttribute('aria-expanded', String(!isExpanded));
 
-                    // You can also add code here to visually close the navigation menu
-                    // For example, you can add a CSS class to hide the menu when aria-expanded is false
-                    if (!isExpanded) {
-                        document.querySelector('.primary-navigation').classList.add('hidden');
-                    } else {
-                        document.querySelector('.primary-navigation').classList.remove('hidden');
-                    }
-                });
-            });
+        // Hide mobileNavToggle when the navigation menu is closed
+        if (!isExpanded) {
+            mobileNavToggle.style.display = 'none';
+        } else {
+            mobileNavToggle.style.display = 'block'; // or 'inline-block' based on your design
+        }
+    }
+
+    // Add click event listener to the Our Services link
+    ourServicesLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleMobileMenu();
+    });
+
+    // Add click event listener to mobileNavToggle to show the menu when clicked
+    mobileNavToggle.addEventListener('click', function() {
+        toggleMobileMenu();
+    });
+});
+
     </script>
 
     <div class="page-container">
