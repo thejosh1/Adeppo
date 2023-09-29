@@ -12,40 +12,6 @@ $(document).ready(function() {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Select the mobile nav toggle button and the Our Services link
-  const mobileNavToggle = document.getElementById('mobileNavToggle');
-  const ourServicesLink = document.querySelector('.services-nav a[href="#otherservices"]');
-
-  // Function to toggle mobile navigation menu
-  function toggleMobileMenu() {
-      const isExpanded = mobileNavToggle.getAttribute('aria-expanded') === 'true';
-      mobileNavToggle.setAttribute('aria-expanded', String(!isExpanded));
-      console.log('!isExpanded');
-
-      // Hide mobileNavToggle when the navigation menu is closed
-      if (!isExpanded) {
-          mobileNavToggle.style.display = 'block';
-          console.log("hhhh");
-      } else {
-          mobileNavToggle.style.display = 'none'; // or 'inline-block' based on your design
-          console.log("block");
-      }
-  }
-
-  // Add click event listener to the Our Services link
-  ourServicesLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      toggleMobileMenu();
-  });
-
-  // Add click event listener to mobileNavToggle to show the menu when clicked
-  mobileNavToggle.addEventListener('click', function() {
-      toggleMobileMenu();
-  });
-});
-
-
 const primaryHeader = document.querySelector(".primary-header");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const primaryNav = document.querySelector(".primary-navigation");
