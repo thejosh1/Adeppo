@@ -21,32 +21,27 @@
 
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
-                });
+                    });
                 });
             });
-            document.querySelector('.mobile-nav-toggle').addEventListener('click', toggleNav);
-            
+            document.addEventListener('DOMContentLoaded', function() {
+                // Select all elements with the class 'mobile-nav-toggle'
+                const mobileNavToggles = document.querySelectorAll('.mobile-nav-toggle');
+                
+                // Select the Our Services link
+                const ourServicesLink = document.querySelector('.nav-link-b.is-small-screen[href="#otherservices"]');
 
-            // Handle click on "Our Services" link and close the navigation
-            document.querySelector('.nav-link-b.is-small-screen').addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent the default link behavior
-                function toggleNav() {
-                let nav = document.getElementById('primary-navigation');
+                // Add click event listener to each mobile nav toggle button
 
-                if (nav.style.display === "none" || nav.style.display === "") {
-                    nav.style.display = 'block';
-                } else {
-                    nav.style.display = 'none';
-                }
-            }// Close the navigation
-                // Additional logic for scrolling to the target section if needed
-                let targetId = this.getAttribute('href').substring(1);
-                let targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
+                // Add click event listener to the Our Services link
+                ourServicesLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    document.querySelector('.primary-navigation').removeAttribute('data-visible');
+                }); 
             });
-
     </script>
 
     <div class="page-container">
@@ -69,7 +64,7 @@
                     </div>
                     <li><a href="logistics.html" class="nav-link">Marine Logistics</a></li>
                     <li><a href="renewable-energy.html" class="nav-link">Renewable Energy</a></li>
-                    <li><a href="#otherservices" class="nav-link-b | is-small-screen" id="services-mobile">Our Services</a></li>
+                    <li><a href="#otherservices" class="nav-link-b | is-small-screen">Our Services</a></li>
                     <li><a href="contact-us-page.html" class="nav-link-b | is-small-screen">Contact us</a></li>
             </nav>
             <div class="services-nav">

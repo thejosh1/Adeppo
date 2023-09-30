@@ -12,7 +12,6 @@ $(document).ready(function() {
   });
 });
 
-const primaryHeader = document.querySelector(".primary-header");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const primaryNav = document.querySelector(".primary-navigation");
 
@@ -21,7 +20,6 @@ navToggle.addEventListener("click", () => {
     ? navToggle.setAttribute("aria-expanded", false)
     : navToggle.setAttribute("aria-expanded", true);
   primaryNav.toggleAttribute("data-visible");
-  primaryHeader.toggleAttribute("data-overlay");
 });
 
 const iconClose = document.querySelector(".icon-close");
@@ -31,7 +29,6 @@ iconClose.addEventListener("click", () => {
     ? iconClose.setAttribute("aria-expanded", "false")
     : iconClose.setAttribute("aria-expanded", "true");
   primaryNav.toggleAttribute("data-visible");
-  primaryHeader.style.backgroundImage = ""; // Remove the background image
 });
 
 const dropdowns = document.querySelectorAll(".dropdown");
