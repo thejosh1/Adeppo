@@ -25,7 +25,12 @@
                 });
             });
             document.querySelector('.mobile-nav-toggle').addEventListener('click', toggleNav);
-            function toggleNav() {
+            
+
+            // Handle click on "Our Services" link and close the navigation
+            document.querySelector('.nav-link-b.is-small-screen').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                function toggleNav() {
                 let nav = document.getElementById('primary-navigation');
 
                 if (nav.style.display === "none" || nav.style.display === "") {
@@ -33,12 +38,7 @@
                 } else {
                     nav.style.display = 'none';
                 }
-            }
-
-            // Handle click on "Our Services" link and close the navigation
-            document.querySelector('.nav-link-b.is-small-screen').addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent the default link behavior
-                toggleNav(); // Close the navigation
+            }// Close the navigation
                 // Additional logic for scrolling to the target section if needed
                 let targetId = this.getAttribute('href').substring(1);
                 let targetElement = document.getElementById(targetId);
