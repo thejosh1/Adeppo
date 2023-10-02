@@ -143,12 +143,31 @@ svg {
   max-height: 100px;
 }
 
+.nav-wrapper {
+  transition: top 0.3s ease; /* Add a smooth transition effect */
+}
+
+.nav-wrapper.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1000;
+  max-height: 130px;
+}
+
 @media (max-width: 50em) {
   .nav-wrapper {
-    margin-left: 0.9375rem;
-    margin-right: 1.354375rem;
-    margin-top: 0px;
-    position: relative;
+    transition: top 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  .nav-wrapper.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff; /* Set your desired background color */
+    z-index: 1000;
+    height: 100px;
   }
 }
 

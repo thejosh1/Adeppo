@@ -12,6 +12,45 @@ $(document).ready(function() {
   });
 });
 
+let lastScrollTop = 0;
+const navWrapper = document.querySelector(".nav-wrapper");
+
+window.addEventListener("scroll", () => {
+  if (window.innerWidth <= 50 * 16) { // For mobile screens
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Scroll down
+      navWrapper.classList.remove("sticky");
+    } else {
+      // Scroll up
+      if (currentScroll <= 0) {
+        navWrapper.classList.remove("sticky");
+      } else {
+        navWrapper.classList.add("sticky");
+      }
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  } else { // For larger screens
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Scroll down
+      navWrapper.classList.remove("sticky");
+    } else {
+      // Scroll up
+      if (currentScroll <= 0) {
+        navWrapper.classList.remove("sticky");
+      } else {
+        navWrapper.classList.add("sticky");
+      }
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  }
+});
+
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const primaryNav = document.querySelector(".primary-navigation");
 
@@ -438,4 +477,5 @@ const indicatorCircles = document.querySelectorAll('.indicator-column div');
     });    
   }
 
-  bannerImageContainer.addEventListener('touchstart', handleSwipe);
+bannerImageContainer.addEventListener('touchstart', handleSwipe);
+
