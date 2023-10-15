@@ -2797,6 +2797,10 @@ p.text {
     color: #ffffff;
     padding-top: 25%;
   }
+
+  .real-estate-image-text:hover {
+    color: #060454;
+  }
 }
 
 @media (min-width: 801px) {
