@@ -390,10 +390,6 @@ svg {
 }
 
 @media (min-width: 1024px) {
-  .nav-list .current {
-    /* text-decoration: underline;
-    text-decoration-skip-ink: auto; */
-  }
 
   .text-underline {
     display: flex;
@@ -404,6 +400,7 @@ svg {
     width: 130px;
     height: 1.5px;
     margin-top: 2px;
+    transition: width 0.3s ease, background 0.3s ease;
   }
 }
 
@@ -430,6 +427,12 @@ svg {
 .nav-list a:hover,
 .nav-list a:focus {
   text-decoration: underline;
+}
+
+.nav-link.current .underline {
+  width: 81px;
+  background-color: #774E26;
+  transition: width 0.3s ease, background 0.3s ease;
 }
 
 @media (min-width: 801px) {
@@ -3637,12 +3640,14 @@ p.text {
     border-radius: 20px;
     margin-bottom: 30.3px;
     display: none;
+    transition: width 0.3s ease, background 0.3s ease;
   }
 }
 
 @media (min-width: 801px) {
   .underline {
-    margin-bottom: 70px
+    margin-bottom: 70px;
+    transition: width 0.3s ease, background 0.3s ease;
   }
 }
 
@@ -6689,6 +6694,7 @@ body.active-popup .popup {
     border-radius: 20px;
     background: #686868;
     margin-bottom: 70.3px;
+    transition: width 0.3s ease, background 0.3s ease;
   }
 }
 
@@ -6700,6 +6706,7 @@ body.active-popup .popup {
     background: #686868;
     margin-bottom: 70.3px;
     width: 294px;
+    transition: width 0.3s ease, background 0.3s ease;
   }
 
   #description-column-text {

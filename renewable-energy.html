@@ -56,9 +56,21 @@
             <nav class="primary-navigation" id="primary-navigation">
                 <ul aria-label="Primary" role="list" class="nav-list">
                     <img class="icon-close" src="public/images/icon-close.svg" alt="" aria-hidden="true">
-                    <li><a href="oil-and-gas.html" class="nav-link" style="text-decoration: none;">Oil and Gas</a></li>
-                    <li><a href="logistics.html" class="nav-link" style="text-decoration: none;">Marine Logistics</a></li>
-                    <div class="text-underline"><li><a href="renewable-energy.html" class="nav-link current" style="text-decoration: none;"><p>Renewable Energy</p>
+                    <li><a href="oil-and-gas.html" class="nav-link" style="text-decoration: none;" onmouseover="hoverLink(this)" onmouseout="unhoverLink(this)">
+                            <p>
+                                Oil and Gas
+                            </p>
+                            <div class="underline" style="width: 81px;"></div>
+                        </a>
+                    </li>
+                    <li><a href="logistics.html" class="nav-link" style="text-decoration: none;" onmouseover="hoverLink(this)" onmouseout="unhoverLink(this)">
+                            <p>
+                                Marine Logistics
+                            </p>
+                            <div class="underline" style="width: 115px;"></div>
+                        </a>
+                    </li>
+                    <div class="text-underline"><li><a href="renewable-energy.html" class="nav-link current" style="text-decoration: none;" onmouseover="hoverLink(this)" onmouseout="unhoverLink(this)"><p>Renewable Energy</p>
                         <div class="underline" style="background: #FF6D00; width: 131px;"></div>
                         </a></li>
                     </div>
@@ -518,6 +530,52 @@
         <script src="main.js" type="module"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            function hoverLink(element) {
+                // Change the text color of the hovered link
+                element.style.color = '#FF6D00';
+    
+                // Find the underline element within the hovered link
+                var underline = element.querySelector('.underline');
+    
+                if (element.textContent.includes('Oil and Gas')) {
+                    var renewableEnergy = document.querySelector('.nav-link.current');
+                    renewableEnergy.style.color = "#293037"
+                    underline.style.width = '81px';
+                    underline.style.background = '#FF6D00';
+                } else if (element.textContent.includes('Marine Logistics')) {
+                    var renewableEnergy = document.querySelector('.nav-link.current');
+                    renewableEnergy.style.color = "#293037"
+                    underline.style.width = '115px';
+                    underline.style.background = '#FF6D00';
+                }
+                // Disable underlines for other links except the hovered link
+                var otherLinks = document.querySelectorAll('.nav-link');
+                otherLinks.forEach(function (link) {
+                    if (link !== element) {
+                        var otherUnderline = link.querySelector('.underline');
+                        otherUnderline.style.width = '0';
+                    }
+                });
+            }
+    
+    
+            function unhoverLink(element) {
+                // Reset the text color of the link when the mouse moves away
+                element.style.color = '#293037';
+    
+                // Find the underline element within the link
+                var underline = element.querySelector('.underline');
+    
+                // Reset the underline width to 0 for the link
+                underline.style.width = '0';
+    
+                // Enable underline for marine logistics when not hovering over any link
+                var oilAndGasLink = document.querySelector('.nav-link.current');
+                var oilAndGasUnderline = oilAndGasLink.querySelector('.underline');
+                oilAndGasUnderline.style.width = '130px';
+            }
+        </script>
 </body>
 
 </html>
