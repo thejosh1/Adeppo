@@ -70,17 +70,17 @@
                             <div class="underline" style="width: 115px;"></div>
                         </a>
                     </li>
-                    <div class="text-underline"><li><a href="renewable-energy.html" class="nav-link current" style="text-decoration: none;" onmouseover="hoverLink(this)" onmouseout="unhoverLink(this)"><p>Renewable Energy</p>
+                    <div class="text-underline"><li><a href="renewable-energy.html" class="nav-link current" style="text-decoration: none; color: #FF6D00;" onmouseover="hoverLink(this)" onmouseout="unhoverLink(this)"><p>Renewable Energy</p>
                         <div class="underline" style="background: #FF6D00; width: 131px;"></div>
                         </a></li>
                     </div>
-                    <li><a href="#otherservices" class="nav-link-b | is-small-screen">Our Services</a></li>
+                    <li><a href="#otherservices" class="nav-link-b | is-small-screen" style="color: #FF6D00;">Our Services</a></li>
                     <li><a href="contact-us-page.html" class="nav-link-b | is-small-screen">Contact us</a></li>
                 </ul>
             </nav>
             <div class="services-nav">
                 <p class="our-services">
-                    <a href="#otherservices" class="nav-link" style="text-decoration: none; color: #293037; transition: color 0.3s ease;" onmouseover="this.style.color='#FF6D00'" onmouseout="this.style.color='#293037'"> Our Services </a>
+                    <a href="#otherservices" class="nav-link" style="text-decoration: none; color: #FF6D00; transition: color 0.3s ease;"> Our Services </a>
                 </p>
                 <p class="contact-link"><a href="contact-us-page.html">Contact us</a></p>
                 <button class="oil-and-gas-button" style="background: #FF6D00;">
@@ -532,23 +532,24 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>
             function hoverLink(element) {
-                // Change the text color of the hovered link
-                element.style.color = '#FF6D00';
-    
                 // Find the underline element within the hovered link
                 var underline = element.querySelector('.underline');
     
                 if (element.textContent.includes('Oil and Gas')) {
                     var renewableEnergy = document.querySelector('.nav-link.current');
-                    renewableEnergy.style.color = "#293037"
+                    renewableEnergy.style.color = "#293037";
+                     // Change the text color of the hovered link
+                    element.style.color = '#774E26';
                     underline.style.width = '81px';
-                    underline.style.background = '#FF6D00';
+                    underline.style.background = '#774E26';
                 } else if (element.textContent.includes('Marine Logistics')) {
                     var renewableEnergy = document.querySelector('.nav-link.current');
-                    renewableEnergy.style.color = "#293037"
+                    renewableEnergy.style.color = "#293037";
+                    element.style.color = '#060454';
                     underline.style.width = '115px';
-                    underline.style.background = '#FF6D00';
-                }
+                    underline.style.background = '#060454';
+                } 
+                
                 // Disable underlines for other links except the hovered link
                 var otherLinks = document.querySelectorAll('.nav-link');
                 otherLinks.forEach(function (link) {
@@ -573,6 +574,7 @@
                 // Enable underline for marine logistics when not hovering over any link
                 var oilAndGasLink = document.querySelector('.nav-link.current');
                 var oilAndGasUnderline = oilAndGasLink.querySelector('.underline');
+                oilAndGasLink.style.color = '#FF6D00';
                 oilAndGasUnderline.style.width = '130px';
             }
         </script>
